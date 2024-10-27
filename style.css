@@ -1,0 +1,165 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    background: linear-gradient(to right, #4C64DE , #1618FF,#555695 );
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+   background: linear-gradient(to right, #F70303 , yellow, Green, blue);
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6); /* Glowing shadow for the container */
+}
+
+/* Header styling */
+.header h1 {
+    font-size: 28px;
+    color: #50CE13;
+    margin-bottom: 25px;
+    font-weight: bold;
+    background: linear-gradient(to right, #000000 , #000000, Green); /* Gradient text */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Search bar styling */
+.search-bar {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    width: 80%;
+    max-width: 400px;
+    padding: 14px 18px;
+    font-size: 16px;
+    border-radius: 30px; /* Round edges */
+    border: 2px solid #444;
+    background-color: white;
+    color: black;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: blue; /* Border changes on focus */
+}
+
+.search-bar input::placeholder {
+    color: #000000;
+}
+
+/* Search button styling */
+.search-bar button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    background-color: #5FFF61;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 5px 10px rgba(255, 126, 95, 0.3); /* Soft shadow for the button */
+}
+
+.search-bar button:hover {
+    background-color: #57E206; /* Lighter gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.search-bar button:active {
+    transform: translateY(1px); /* Button press effect */
+    background-color: #91FF5F;
+}
+
+/* App icons styling */
+.app-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 icons per row */
+    gap: 20px;
+    margin-top: 30px;
+    justify-items: center;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.icon img:hover {
+    transform: scale(1.1); /* Grow the icon slightly on hover */
+}
+
+.icon p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Bottom navigation bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #D12727;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+}
+
+.bottom-nav div {
+    text-align: center;
+}
+
+.bottom-nav div img {
+    width: 30px;
+    height: 30px;
+}
+
+.bottom-nav div p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .app-icons {
+        grid-template-columns: repeat(3, 1fr); /* 3 icons per row on smaller screens */
+    }
+
+    .search-bar input {
+        width: 90%;
+    }
+
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon p {
+        font-size: 10px;
+    }
+}
